@@ -4,13 +4,15 @@
 @import "./fonts/ravie.css";
 @import "./fonts/verdana.css";
 
-
 body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
   background-color: #fff;
 }
 
 strong {
   color: #d027aa;
+  font-family: Ravie, sans-serif;
 }
 
 #recipiente {
@@ -40,27 +42,31 @@ strong {
 
 /* EXERCÍCIO 2: layout da página */
 #recipiente {
-  /* layout da página aqui */
-  /* ... */
-  /* ... */
-  /* ... */
-  /* ... */
+  grid-template:  "lateral cabecalho" auto
+                  "lateral conteudo" 1fr
+                  "lateral rodape" auto
+                  / 170px 1fr;
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid; 
 }
 
 #cabecalho-pagina {
-
+  grid-area: cabecalho;
 }
 
 #lateral {
-
+  grid-area: lateral;
 }
 
 #cardapio {
-
+  grid-area: conteudo;
 }
 
 #rodape-pagina {
-
+  grid-area: rodape;
 }
 
 
@@ -108,6 +114,9 @@ article {
 
 /* EXERCÍCIO 8: deslocamento no siri e peixe */
 #siri {
+  position: relative;
+  top: 17px;
+  left: -10px;
 }
 
 #peixe {
