@@ -46,8 +46,8 @@ strong {
                   "lateral conteudo" 1fr
                   "lateral rodape" auto
                   / 170px 1fr;
-  margin: 0px;
-  padding: 0px;
+  padding: 0;
+  width: 800px;
   min-height: 100vh;
   margin: 0 auto;
   display: grid; 
