@@ -121,9 +121,16 @@ article {
 
 /* EXERCÍCIO 7: o ticket */
 #ticket {
+  position: fixed;
+  top: 50%;
+  left: -89px;
+  transform: translateY(-50%);
+  transition: all 300ms ease-out;
 }
 
 #ticket:hover {
+  transition: all 300ms ease-out;
+  left: 0;
 }
 
 
