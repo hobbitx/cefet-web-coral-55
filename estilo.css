@@ -4,10 +4,31 @@
 @import "./fonts/ravie.css";
 @import "./fonts/verdana.css";
 
+:root {
+  --cor-do-texto: #333;
+  --cor-de-fundo: #fff;
+  --cor-do-cabecalho: #e90c0c;
+  --cor-de-fundo-recipiente: linear-gradient(to bottom, #f6f1b2, #4599b2 80%);
+  --cor-de-fundo-cardapio: rgba(255, 255, 255, 0.2);
+  --cor-borda-cardapio: #aac0ae;
+  --cor-borda-recipiente: #d3d3d3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-do-texto: #eee;
+    --cor-de-fundo: #000;
+    --cor-de-fundo-recipiente: linear-gradient(to bottom, #1e5969, #181a2a 80%);
+    --cor-de-fundo-cardapio: rgba(0, 0, 0, 0.2);
+    --cor-borda-cardapio: #383d39;
+    --cor-borda-recipiente: #616161;
+  }
+}
+
 body {
   font-family: Verdana, sans-serif;
   margin: 0;
-  background-color: #fff;
+  background-color: var(--cor-de-fundo);
 }
 
 strong {
@@ -16,27 +37,27 @@ strong {
 }
 
 #recipiente {
-  background-image: linear-gradient(to bottom, #f6f1b2, #4599b2 80%);
-  border-left: 1px solid #d3d3d3;
-  border-right: 1px solid #d3d3d3;
+  background-image: var( --cor-de-fundo-recipiente);
+  border-left: 1px solid  var(--cor-borda-recipiente);
+  border-right: 1px solid var(--cor-borda-recipiente);
 }
 
 #cardapio {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-top: 1px solid #aac0ae;
-  border-bottom: 1px solid #aac0ae;
-  border-left: 1px solid #aac0ae;
+  background-color:var(--cor-de-fundo-cardapio);
+  border-top: 1px solid var(--cor-borda-cardapio);
+  border-bottom: 1px solid var(--cor-borda-cardapio);
+  border-left: 1px solid var(--cor-borda-cardapio);
 }
 
 #cardapio h3 {
   font-size: 18px;
-  color: #333;
+  color: var(--cor-do-texto);
   margin-top: 30px;
 }
 
 #cardapio article {
   font-size: 14px;
-  color: #333;
+  color: var(--cor-do-texto);
 }
 
 
@@ -80,7 +101,7 @@ strong {
 #cabecalho-pagina h1 {
   margin: 0;
   font-size: 36px;
-  color: #e90c0c;
+  color: var(--cor-do-cabecalho);
   font-weight: normal;
   padding-right: 55px;
   text-align: end;
@@ -90,7 +111,7 @@ strong {
   margin: 0;
   font-size: 24px;
   margin-top: 10px;
-  color: #333;
+  color: var(--cor-do-texto);
   font-weight: normal;
   text-align: end;
 }
