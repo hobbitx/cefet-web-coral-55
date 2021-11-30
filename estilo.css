@@ -73,7 +73,7 @@ strong {
 
 /* EXERCÍCIO 3: cabeçalho da página */
 #cabecalho-pagina {
-
+  margin: 10px;
 }
 
 #cabecalho-pagina h1 {
@@ -81,6 +81,8 @@ strong {
   font-size: 36px;
   color: #e90c0c;
   font-weight: normal;
+  padding-right: 55px;
+  text-align: end;
 }
 
 #cabecalho-pagina h2 {
@@ -88,6 +90,7 @@ strong {
   font-size: 24px;
   color: #333;
   font-weight: normal;
+  text-align: end;
 }
 
 /* EXERCÍCIO 4: cada item do menu */
